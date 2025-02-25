@@ -1,0 +1,28 @@
+/* Global styles untuk aplikasi */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color:  rgb(246, 241, 236);;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #333;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  /* Dan seterusnya untuk styling global yang ingin diterapkan */
+  

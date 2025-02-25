@@ -1,0 +1,109 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Container */
+  .modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 450px;
+    max-width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adding soft shadow */
+    font-family: Arial, sans-serif; /* Clean, modern font */
+    color: #333; /* Text color */
+  }
+  
+  /* Modal Title */
+  .modal h2 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #4CAF50; /* Title color */
+    text-align: center;
+  }
+  
+  /* Input Fields and Textarea */
+  .modal input,
+  .modal textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: inherit; /* Use same font for inputs */
+    transition: all 0.3s ease;
+  }
+  
+  /* Input Fields Focus */
+  .modal input:focus,
+  .modal textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.6);
+  }
+  
+  /* Textarea Styling */
+  .modal textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  /* Modal Actions (Buttons) */
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+  }
+  
+  .modal-actions button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Save Button */
+  .modal-actions button:first-child {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .modal-actions button:first-child:hover {
+    background-color: #45a049;
+  }
+  
+  /* Cancel Button */
+  .modal-actions button:last-child {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .modal-actions button:last-child:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Modal Form Label */
+  .modal label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Modal Button Layout */
+  .modal-actions button:focus {
+    outline: none;
+  }
+  

@@ -1,0 +1,149 @@
+:root {
+    --primary-color: rgb(170, 137, 98); /* Warna tombol dan aksen */
+    --secondary-color: #f1dbba; /* Warna hover tombol */
+    --background-color: #f2e9c8; /* Warna background utama */
+    --form-bg-color: #FFFFFF; /* Background form login */
+    --input-border-color: #BBDEFB; /* Warna border input */
+    --text-color: #333333; /* Warna teks utama */
+    --link-color: rgb(170, 137, 98); /* Warna teks link */
+    --link-hover-color: rgb(140, 110, 82);  /* Warna teks link saat hover */
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pastikan mengambil tinggi penuh */
+    width: 100vw;  /* Lebar penuh */
+    position: absolute; /* Pastikan elemen login tidak bergantung pada parent */
+    top: 0;
+    left: 0;
+    background-color: #f8f8fc; /* Warna latar belakang */
+  }
+  
+  .login-box {
+    display: flex;
+    background: var(--form-bg-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 800px;
+  }
+  
+  .login-image {
+    width: 50%;
+    background: var(--input-border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image {
+    width: 75%;
+    height: auto;
+  }
+  
+  .login-form {
+    width: 50%;
+    padding: 40px;
+  }
+  
+  .logo {
+    width: 120px; /* Atur ukuran logo */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .login-title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .checkbox {
+    margin-right: 5px;
+  }
+  
+  .forgot-password {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  
+  .forgot-password:hover {
+    color: var(--link-hover-color);
+  }
+  
+  .login-button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: var(--secondary-color);
+  }
+ 
+  /* Gaya untuk gambar di bagian kiri */
+.login-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .image {
+    max-width: 100%; /* Pastikan gambar tidak lebih besar dari area */
+    height: auto; /* Biarkan tinggi menyesuaikan */
+    object-fit: contain; /* Gambar tidak akan terpotong */
+  }
+  
+  /* Gaya langsung untuk logo */
+  .logo {
+    display: block;
+    margin: 0 auto 20px auto; /* Tengah & beri jarak bawah */
+    width: 120px; /* Atur ukuran logo */
+    height: auto;
+    object-fit: contain;
+  }
+  
