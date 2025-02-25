@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
-import '../styles/Sidebar.css'; // Import your CSS for styling
+import { Link, useNavigate } from 'react-router-dom'; 
+import '../styles/Sidebar.css'; 
 
 const Sidebar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Modal visibility state
-  const [activeItem, setActiveItem] = useState(null); // State untuk item yang aktif
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [isModalOpen, setIsModalOpen] = useState(false); 
+  const [activeItem, setActiveItem] = useState(null); 
+  const navigate = useNavigate(); 
 
-  // Open confirmation modal
   const handleLogoutClick = () => {
-    setIsModalOpen(true); // Show the confirmation modal
+    setIsModalOpen(true); 
   };
 
   // Handle logout confirmation
   const handleLogoutConfirm = () => {
-    // Clear session data (e.g., localStorage or sessionStorage)
-    localStorage.clear(); // or sessionStorage.clear();
-    // Redirect to login page after logout
-    navigate('/login'); // Use navigate instead of history.push
-    setIsModalOpen(false); // Close the modal after logout
+    localStorage.clear(); 
+    navigate('/login'); 
+    setIsModalOpen(false); 
   };
 
   // Close the modal if user cancels
@@ -28,7 +25,7 @@ const Sidebar = () => {
 
   // Handle klik item sidebar untuk aktifkan
   const handleItemClick = (itemName) => {
-    setActiveItem(itemName); // Update state dengan item yang aktif
+    setActiveItem(itemName); 
   };
 
   return (

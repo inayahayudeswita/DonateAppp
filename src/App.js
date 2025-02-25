@@ -6,8 +6,8 @@ import { Content } from './components/Content';
 import Program from './components/Program';
 import Transaksi from './components/Transaksi';
 import Settings from './components/Settings';
-import Login from "./components/Login";
-import Logout from "./components/Logout";
+import Login from './components/Login';
+import Logout from './components/Logout';
 import './styles/App.css';
 
 const Layout = ({ children }) => {
@@ -16,6 +16,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app-container">
+      {/* Hanya tampilkan Sidebar pada route selain /login dan /logout */}
       {!hideSidebarRoutes.includes(location.pathname) && <Sidebar />}
       {children}
     </div>
@@ -24,15 +25,20 @@ const Layout = ({ children }) => {
 
 const App = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("authToken");
+    // Jika pengguna belum login, arahkan ke halaman login
     if (!isLoggedIn) {
       navigate("/login");
     } else {
-      navigate("/content");  // Menambahkan redirect otomatis ke "/content"
+      // Hanya arahkan ke "/content" jika pengguna belum di halaman "/content"
+      if (location.pathname === "/") {
+        navigate("/content");
+      }
     }
-  }, [navigate]);
+  }, [navigate, location]);
 
   return (
     <Layout>
